@@ -48,6 +48,28 @@ export default {
 
 }
 </script>
+import { loginService } from '@/_services'
+export default {
+    name: 'Login',
+    data(){
+        return {
+            user: {
+                email: '',
+                password: ''
+            }
+        }
+    },
+    methods: {
+        login(){
+            loginService.login(this.user)
+                .then(res => {
+                    loginService.saveToken(res.data.access_token)
+                    this.$router.push('/admin/dashboard')
+                })
+                .catch(err => console.log(err))
+        }
+        }
+        }
 
 <style>
 
