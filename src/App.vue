@@ -1,20 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+     <TestRecrutement />
+  </div>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TestRecrutement from './components/TestRecrutement.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TestRecrutement
   }
 }
 </script>
 
 <style>
+@import url('./vendor/css/bootstrap.min.css');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
